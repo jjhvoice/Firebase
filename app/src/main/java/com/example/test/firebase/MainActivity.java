@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                            FirebaseUser user = firebaseAuth.getCurrentUser();
                             // 이메일 설정
                             user.updateEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
